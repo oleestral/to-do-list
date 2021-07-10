@@ -12,9 +12,15 @@
 }
 .header {
     margin-top: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 @media all and (min-width: 480px) {
     .header {
@@ -32,7 +38,9 @@
     font-weight: 700;
     font-style: normal;
     font-size: 35px;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     text-transform: uppercase;
     color: #000;
 }
@@ -42,8 +50,13 @@
     }
 }
 .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin: 25px 10px 30px 10px;
     min-height: 480px;
 }
@@ -66,9 +79,15 @@
     }
 }
 .form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .input {
     display: inline-block;
@@ -78,9 +97,38 @@
     background: white;
     padding: 10px 10px 10px 15px;
     width: 100%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     border: 2px solid black;
 
+}
+.input::-webkit-input-placeholder {
+    font-family: 'PT Sans', 'Arial', 'sans-serif';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    color: grey;
+}
+.input::-moz-placeholder {
+    font-family: 'PT Sans', 'Arial', 'sans-serif';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    color: grey;
+}
+.input:-ms-input-placeholder {
+    font-family: 'PT Sans', 'Arial', 'sans-serif';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    color: grey;
+}
+.input::-ms-input-placeholder {
+    font-family: 'PT Sans', 'Arial', 'sans-serif';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    color: grey;
 }
 .input::placeholder {
     font-family: 'PT Sans', 'Arial', 'sans-serif';
@@ -90,6 +138,18 @@
     color: grey;
 }
 @media all and (min-width: 1240px) {
+    .input::-webkit-input-placeholder {
+        font-size: 18px;
+    }
+    .input::-moz-placeholder {
+        font-size: 18px;
+    }
+    .input:-ms-input-placeholder {
+        font-size: 18px;
+    }
+    .input::-ms-input-placeholder {
+        font-size: 18px;
+    }
     .input::placeholder {
         font-size: 18px;
     }
@@ -116,7 +176,9 @@ input[type=text] {
     background-position: center;
     background-size: cover;
     margin-left: 5px;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
 }
 @media all and (min-width: 1240px) {
     .add-button {
@@ -154,8 +216,12 @@ input[type=text] {
     list-style: none;
 }
 .list-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     margin-bottom: 3px;
     
@@ -172,7 +238,8 @@ input[type=text] {
     font-weight: 400;
     font-style: normal;
     font-size: 15px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 @media all and (min-width: 1024px) {
     .list-item__paragraph {
@@ -187,10 +254,14 @@ input[type=text] {
 .delete-button {
     width: 20px;
     height: 20px;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     margin-left: 5px;
     background: url('./images/button.svg');
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
     border: none;
     outline: none;
     background-repeat: no-repeat;
@@ -226,7 +297,8 @@ input[type=text] {
 }
 .cross-button:hover {
     cursor: pointer;
-    box-shadow: 0 0 2px #3075f3;
+    -webkit-box-shadow: 0 0 2px #3075f3;
+            box-shadow: 0 0 2px #3075f3;
 }
 .cross-button_focused {
     background-color: #3075f3;
