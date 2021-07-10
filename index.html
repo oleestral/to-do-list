@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = './index.css'>
+    <title>To do list</title>
+</head>
+<body class = "body">
+    <header class = "header">
+        <h1 class = "header__title">To Do List</h1>
+    </header>
+    <main class = "main">
+        <form class = "form">
+            <input type = "text" class = "input" name = "todo" placeholder="Добавьте задачу" autocomplete="off" required>
+            <button type = "submit" class = "add-button">
+            </button>
+        </form>
+        <section class = "tasks current-task">
+            <h2 class = "section-title current-task__title">Current</h2>
+            <ul class = "output current-task__output">
+            </ul>
+        </section>
+        <section class = "tasks done-tasks">
+            <h2 class = "section-title done-tasks__title">Done</h2>
+            <ul class = "output done-tasks__output"></ul>
+        </section>
+        <template id = "current-item">
+            <li class = "list-item">
+                <button class = "cross-button" type = "button"></button>
+                <p class = "list-item__paragraph"></p>
+                <button class = "delete-button" type="button"></button>
+            </li>
+        </template>
+    </main>
+    <script src = "./index.js"></script>
+</body>
+</html>

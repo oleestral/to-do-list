@@ -1,0 +1,234 @@
+@import url('./vendor/normalize.css');
+
+@import url('./vendor/fonts/ptsans.css');
+
+.body {
+    background: white;
+    font-family: 'PT Sans', 'Arial', 'sans-serif';
+    color: #000;
+    max-width: 1440px;
+    margin: auto;
+    overflow: hidden;
+}
+.header {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media all and (min-width: 480px) {
+    .header {
+        margin-top: 20px;
+    }
+}
+@media all and (min-width: 1024px) {
+    .header {
+        margin-top: 25px;
+    }
+}
+.header__title {
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 35px;
+    align-self: center;
+    text-transform: uppercase;
+    color: #000;
+}
+@media all and (min-width: 1024px) {
+    .header__title {
+        font-size: 40px;
+    }
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 10px 30px 10px;
+    min-height: 480px;
+}
+@media all and (min-width: 480px) {
+    .main {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+@media all and (min-width: 1024px) {
+    .main {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
+@media all and (min-width: 1440px) {
+    .main {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.input {
+    display: inline-block;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: white;
+    padding: 10px 10px 10px 15px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid black;
+
+}
+.input::placeholder {
+    font-family: 'PT Sans', 'Arial', 'sans-serif';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    color: grey;
+}
+@media all and (min-width: 1240px) {
+    .input::placeholder {
+        font-size: 18px;
+    }
+}
+input[type=text] {
+    font-family: 'Open Sans', 'Arial', 'sans-serif';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    color: black;
+}
+@media all and (min-width: 1440px) {
+    input[type=text] {
+        font-size: 18px;
+    }
+}
+.add-button {
+    border: none;
+    outline: none;
+    width: 20px;
+    height: 20px;
+    background: url('./images/button.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-left: 5px;
+    align-self: center;
+}
+@media all and (min-width: 1240px) {
+    .add-button {
+        width: 25px;
+        height: 25px;
+    }
+}
+.add-button:hover {
+    cursor: pointer;
+}
+.tasks {
+    margin-top: 20px;
+}
+@media all and (min-width: 1024px) {
+    .tasks {
+        margin-top: 30px;
+    }
+}
+.section-title {
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 20px;
+}
+@media all and (min-width: 1024px) {
+    .section-title {
+        font-size: 25px;
+    }
+}
+
+.output {
+    padding: 0;
+    margin-top: 10px;
+    list-style: none;
+}
+.list-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 3px;
+    
+}
+.list-item__paragraph {
+    margin: 0;
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px 5px 5px 10px;
+    background: #3075f3;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    color: white;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+@media all and (min-width: 1024px) {
+    .list-item__paragraph {
+        padding: 10px 10px 10px 15px;
+    }
+}
+@media all and (min-width: 1440px) {
+    .list-item__paragraph {
+        font-size: 18px
+    }
+}
+.delete-button {
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    margin-left: 5px;
+    background: url('./images/button.svg');
+    transform: rotate(45deg);
+    border: none;
+    outline: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+@media all and (min-width: 1240px) {
+    .delete-button {
+        width: 25px;
+        height: 25px;
+    }
+}
+.delete-button:hover{
+    cursor: pointer;
+}
+  .text {
+      text-decoration: line-through;
+  }
+  .cross-button {
+      width: 15px;
+      height: 15px;
+      margin-right: 5px;
+      border: 1px solid black;
+      border-radius: 100%;
+      outline: none;
+      background: inherit;
+  }
+  @media all and (min-width: 1440px) {
+    .cross-button {
+        width: 20px;
+        height: 20px;
+    }
+}
+.cross-button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 2px #3075f3;
+}
+.cross-button_focused {
+    background-color: #3075f3;
+    border: none;
+}
